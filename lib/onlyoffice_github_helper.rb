@@ -1,0 +1,1 @@
+require_relative 'onlyoffice_github_helper/github_client'
