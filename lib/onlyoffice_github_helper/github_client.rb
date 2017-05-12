@@ -1,6 +1,12 @@
+require 'octokit'
+require 'yaml'
+require_relative 'github_client/branches'
+
 module OnlyofficeGithubHelper
   # Basic github client
   class GithubClient
+    include Branches
+
     def initialize(config_file: 'config.yml')
       init_github_access(config_file)
       Octokit.configure do |c|
