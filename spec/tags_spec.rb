@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe OnlyofficeGithubHelper::Branches do
+describe OnlyofficeGithubHelper::Tags do
   let(:github) { OnlyofficeGithubHelper::GithubClient.new }
 
   it 'Check that tags is a array' do

@@ -1,12 +1,14 @@
 require 'octokit'
 require 'yaml'
 require_relative 'github_client/branches'
+require_relative 'github_client/file_list'
 require_relative 'github_client/tags'
 
 module OnlyofficeGithubHelper
   # Basic github client
   class GithubClient
     include Branches
+    include FileList
     include Tags
 
     def initialize(config_file: 'config.yml')
