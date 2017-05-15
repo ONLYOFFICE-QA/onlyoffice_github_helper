@@ -17,6 +17,7 @@ module OnlyofficeGithubHelper
         c.login = @user_name
         c.password = @user_password
       end
+      Octokit.auto_paginate = true
     end
 
     private
