@@ -10,4 +10,8 @@ describe OnlyofficeGithubHelper::Branches do
   it 'Check that branches include master' do
     expect(github.branches('ONLYOFFICE/sdkjs')).to include('master')
   end
+
+  it 'Check that there is more than 30 branches' do
+    expect(github.branches('facebook/react').length).to be > 30
+  end
 end
