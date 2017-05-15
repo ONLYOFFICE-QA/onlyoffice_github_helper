@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = 'Github Helper Gem for ONLYOFFICE QA'
   s.email = ['shockwavenn@gmail.com']
   s.files = `git ls-files lib LICENSE.txt README.md`.split($RS)
-  s.add_runtime_dependency('octokit', '~> 1.6')
+  s.add_runtime_dependency('octokit', '~> 4')
   s.homepage = 'https://github.com/onlyoffice-testing-robot/onlyoffice_github_helper'
   s.license = 'AGPL-3.0'
 end
