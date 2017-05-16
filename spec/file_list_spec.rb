@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-describe OnlyofficeGithubHelper::FileList do
-  let(:github) { OnlyofficeGithubHelper::GithubClient.new }
-
+describe OnlyofficeGithubHelper::FileList, include_shared: true do
   it 'Check that file list is returned' do
     expect(github.file_list('ONLYOFFICE/ooxml_parser')).is_a?(Array)
   end

@@ -16,12 +16,7 @@ module OnlyofficeGithubHelper
       root_tree = { name: path }
       root_tree[:children] = []
       list.each do |item|
-        if with_subdir?(item)
-          subdir = subdir_name(item)
-          root_tree[:children] << parse_tree(subdir_content(list, subdir), path: subdir)
-        else
-          root_tree[:children] << { name: item }
-        end
+        root_tree[:children] << parse_item(list, item)
       end
       root_tree[:children].uniq!
       root_tree
@@ -46,6 +41,15 @@ module OnlyofficeGithubHelper
 
     def subdir_name(path)
       Pathname.new(path).dirname.to_s
+    end
+
+    def parse_item(list, item)
+      if with_subdir?(item)
+        subdir = subdir_name(item)
+        parse_tree(subdir_content(list, subdir), path: subdir)
+      else
+        { name: item }
+      end
     end
   end
 end
