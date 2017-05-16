@@ -16,9 +16,4 @@ describe OnlyofficeGithubHelper::FileList do
     expect(github.file_list('ONLYOFFICE/ooxml_parser'))
       .to include('lib/ooxml_parser/version.rb')
   end
-
-  it 'Check that file list contains folders' do
-    expect(github.file_list('ONLYOFFICE/ooxml_parser'))
-      .to include('lib/')
-  end
 end
