@@ -25,4 +25,9 @@ describe 'parse_tree' do
     expect(parsed[:children][0][:children][0][:name]).to eq('file1')
     expect(parsed[:children][0][:children][1][:name]).to eq('file2')
   end
+
+  it 'parse different level tree ' do
+    parsed = github.parse_tree(['file1', 'file2', 'a/file3', 'a/file4', 'b/file5', 'c/file6'])
+    expect(parsed[:children].length).to eq(5)
+  end
 end
