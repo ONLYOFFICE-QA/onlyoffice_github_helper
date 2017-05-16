@@ -23,6 +23,7 @@ module OnlyofficeGithubHelper
           root_tree[:children] << { name: item }
         end
       end
+      root_tree[:children].uniq!
       root_tree
     end
 
