@@ -8,6 +8,11 @@ describe 'parse_tree', include_shared: true do
     expect(parsed[:children][1][:name]).to eq('file2')
   end
 
+  it 'parse tree name extension in subdir' do
+    parsed = github.parse_tree(['b/file2.rb'])
+    expect(parsed[:children][0][:children][0][:name]).to eq('file2.rb')
+  end
+
   it 'parse basic diff level list' do
     parsed = github.parse_tree(['file1', 'b/file2'])
     expect(parsed[:children].length).to eq(2)
