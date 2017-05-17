@@ -56,7 +56,7 @@ module OnlyofficeGithubHelper
     end
 
     def subdir_name(path)
-      Pathname.new(path).dirname.to_s
+      Pathname(path).each_filename.to_a[0]
     end
   end
 end
