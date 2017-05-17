@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-describe OnlyofficeGithubHelper::FileList do
-  let(:github) { OnlyofficeGithubHelper::GithubClient.new }
-
+describe OnlyofficeGithubHelper::FileList, include_shared: true do
   it 'Check that file list is returned' do
     expect(github.file_list('ONLYOFFICE/ooxml_parser')).is_a?(Array)
   end
@@ -15,5 +13,10 @@ describe OnlyofficeGithubHelper::FileList do
   it 'Check that file contain deep item' do
     expect(github.file_list('ONLYOFFICE/ooxml_parser'))
       .to include('lib/ooxml_parser/version.rb')
+  end
+
+  it 'Check that file tree is not empty' do
+    file_tree = github.file_tree('ONLYOFFICE/ooxml_parser')
+    expect(file_tree).to be_a(Hash)
   end
 end
