@@ -14,7 +14,7 @@ describe OnlyofficeGithubHelper::FileList, include_shared: true do
     expect(github.file_list('ONLYOFFICE/ooxml_parser'))
       .to include('lib/ooxml_parser/version.rb')
   end
-  
+
   it 'Check that file tree is not empty' do
     file_tree = github.file_tree('ONLYOFFICE/ooxml_parser')
     expect(file_tree).to be_a(Hash)

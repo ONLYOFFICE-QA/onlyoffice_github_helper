@@ -15,14 +15,30 @@ module OnlyofficeGithubHelper
     def parse_tree(list, path: '')
       root_tree = { name: path }
       root_tree[:children] = []
-      list.each do |item|
-        root_tree[:children] << parse_item(list, item)
+      childs = tree_childs(list)
+      root_tree[:children] << childs[:files]
+      root_tree[:children].flatten!
+      childs[:dirs].each do |child_item|
+        sub_files = subdir_content(list, child_item)
+        root_tree[:children] << parse_tree(sub_files, path: child_item)
       end
-      root_tree[:children].uniq!
       root_tree
     end
 
     private
+
+    def tree_childs(list)
+      childs = []
+      child_dirs = []
+      list.each do |entry|
+        if with_subdir?(entry)
+          child_dirs << subdir_name(entry)
+        else
+          childs << { name: entry }
+        end
+      end
+      { files: childs, dirs: child_dirs.uniq }
+    end
 
     # Check if path is a string
     # @param file_path [String] path
@@ -41,15 +57,6 @@ module OnlyofficeGithubHelper
 
     def subdir_name(path)
       Pathname.new(path).dirname.to_s
-    end
-
-    def parse_item(list, item)
-      if with_subdir?(item)
-        subdir = subdir_name(item)
-        parse_tree(subdir_content(list, subdir), path: subdir)
-      else
-        { name: item }
-      end
     end
   end
 end
