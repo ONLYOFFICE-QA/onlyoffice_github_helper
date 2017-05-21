@@ -16,12 +16,12 @@ module OnlyofficeGithubHelper
       root_tree = { name: path }
       root_tree[:children] = []
       childs = tree_childs(list)
-      root_tree[:children] << childs[:files]
-      root_tree[:children].flatten!
       childs[:dirs].each do |child_item|
         sub_files = subdir_content(list, child_item)
         root_tree[:children] << parse_tree(sub_files, path: child_item)
       end
+      root_tree[:children] << childs[:files]
+      root_tree[:children].flatten!
       root_tree
     end
 
