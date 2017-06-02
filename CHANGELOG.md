@@ -6,3 +6,4 @@
 
 ### Fixes
 * Correctly handle more than 30 branches\tags
+* Correctly handle if file name starts same as folder name

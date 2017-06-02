@@ -28,14 +28,4 @@ describe 'parse_tree', include_shared: true do
     expect(parsed[:children][0][:children][0][:name]).to eq('file1')
     expect(parsed[:children][0][:children][1][:name]).to eq('file2')
   end
-
-  it 'parse deep level tree' do
-    parsed = github.parse_tree(['a/b/file1'])
-    expect(parsed[:children][0][:name]).to eq('a')
-    expect(parsed[:children][0]\
-                 [:children][0][:name]).to eq('b')
-    expect(parsed[:children][0]\
-                 [:children][0]\
-                 [:children][0][:name]).to eq('file1')
-  end
 end
