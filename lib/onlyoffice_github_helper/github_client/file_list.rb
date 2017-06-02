@@ -50,7 +50,7 @@ module OnlyofficeGithubHelper
     def subdir_content(list, dir)
       subdir_list = []
       list.each do |item|
-        subdir_list << item.gsub("#{dir}/", '') if item.start_with?("#{dir}/")
+        subdir_list << item.sub("#{dir}/", '') if item.start_with?("#{dir}/")
       end
       subdir_list
     end
