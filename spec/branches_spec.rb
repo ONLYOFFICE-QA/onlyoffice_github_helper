@@ -10,6 +10,6 @@ describe OnlyofficeGithubHelper::Branches, include_shared: true do
   end
 
   it 'Check that there is more than 30 branches' do
-    expect(github.branches('facebook/react').length).to be > 30
+    expect(github.branches('twbs/bootstrap').length).to be > 30
   end
 end
