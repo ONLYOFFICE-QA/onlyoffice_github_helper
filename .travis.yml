@@ -1,10 +1,12 @@
 language: ruby
 rvm:
 - ruby-head
-- 2.4.1
-- 2.3.4
-- 2.2.7
+- 2.5.0
+- 2.4.3
+- 2.3.6
+- 2.2.9
 - 2.1.10
+before_install: gem update --system
 env:
   global:
   - secure: jGjmcm1/Ubu4X3J2Zp9I79XO6go7ZQ3xAPSealDTiMrlPIKmIetqhnoBAkQrOWLGDstI0LDaGi0BDM+nWoLI7C7tma1AvKTqiRyMs4g4r1fQfpoqoDUlW+bf1fIrPbHh/rYXC++tPX9lO5gudnBQcg/HCMay25ZKhIJtUMpvnwhT2345aFN/bSkJ01X2+PVKf8vMy3swwe4X9ovKLzig6z5IBgd0gls6CJjXno/sbHipqnNsCg6VYQbMxNlwev35GiiozdonBmL4Bm1lAfeiC4a5HQqwXKv4V09H3f+/ZFQs2Ui/+VxH7xTzRCaNk8/t7l4r5FYpWDREmNG17rfptRM7CgAvDwKzatGwouBy7EhliKViWIyAZJEzJM3WLzsPC8NdCbAZpVv2dtdhpZ4YpP0Vtqvk/7b/SIKD4vUGT+2uUT3NjO/Y0j2j0iX+Tab+700vi8yBByFXhQUtQmN7U1Qv8zfCbGlE8T0Qw7MJKsv9weS8m5LCM6c+zZZm/2zLk38kI8r3r/Ykp+E5PwPxoIdRfoiz8XGfPGiWR7bYfFeNLslVZ4N4rpomuiPf0kXdqsS3EWWqXWDTqHoSHpUUUWufrw5uMN/+NljvJNAZuj6xv+ElCmCuueUhZzwN70D55kOOFuceVbo6hPcWrVR5QDklgZs3UkvM/h3I35w/OII=
