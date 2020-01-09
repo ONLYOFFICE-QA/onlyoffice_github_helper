@@ -18,25 +18,3 @@ Gemspec/RequiredRubyVersion:
 Style/Encoding:
   Exclude:
     - 'Gemfile'
-
-# Offense count: 15
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, never
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'lib/onlyoffice_github_helper.rb'
-    - 'lib/onlyoffice_github_helper/github_client.rb'
-    - 'lib/onlyoffice_github_helper/github_client/branches.rb'
-    - 'lib/onlyoffice_github_helper/github_client/file_list.rb'
-    - 'lib/onlyoffice_github_helper/github_client/tags.rb'
-    - 'lib/onlyoffice_github_helper/version.rb'
-    - 'onlyoffice_github_helper.gemspec'
-    - 'spec/branches_spec.rb'
-    - 'spec/file_list/parse_deep_tree_spec.rb'
-    - 'spec/file_list/parse_tree_spec.rb'
-    - 'spec/file_list_spec.rb'
-    - 'spec/spec_helper.rb'
-    - 'spec/tags_spec.rb'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'octokit'
 require 'yaml'
 require_relative 'github_client/branches'
