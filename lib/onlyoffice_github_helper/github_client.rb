@@ -26,6 +26,7 @@ module OnlyofficeGithubHelper
       @user_name = ENV['GITHUB_USER_NAME']
       @user_password = ENV['GITHUB_USER_PASSWORD']
       return unless File.exist?(config)
+
       @config = YAML.load_file(config)
       @user_name = @config['github_user']
       @user_password = @config['github_user_password']

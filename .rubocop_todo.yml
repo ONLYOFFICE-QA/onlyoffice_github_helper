@@ -15,12 +15,6 @@ Gemspec/RequiredRubyVersion:
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Layout/EmptyLineAfterGuardClause:
-  Exclude:
-    - 'lib/onlyoffice_github_helper/github_client.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
 Style/Encoding:
   Exclude:
     - 'Gemfile'
