@@ -13,7 +13,11 @@ module OnlyofficeGithubHelper
     include FileList
     include Tags
 
-    def initialize(config_file: 'config.yml')
+    def initialize(config_file: 'config.yml',
+                   user: nil,
+                   password: nil)
+      @user_name = user
+      @user_password = password
       init_github_access(config_file)
       Octokit.configure do |c|
         c.login = @user_name
@@ -25,6 +29,8 @@ module OnlyofficeGithubHelper
     private
 
     def init_github_access(config)
+      return if @user_name && @user_password
+
       @user_name = ENV['GITHUB_USER_NAME']
       @user_password = ENV['GITHUB_USER_PASSWORD']
       return unless File.exist?(config)
