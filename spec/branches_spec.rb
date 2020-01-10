@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe OnlyofficeGithubHelper::Branches, include_shared: true do

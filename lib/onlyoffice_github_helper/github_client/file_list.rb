@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module OnlyofficeGithubHelper
   # Module for working with file list
   module FileList

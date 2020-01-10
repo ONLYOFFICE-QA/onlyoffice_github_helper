@@ -1,10 +1,12 @@
-$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift File.expand_path('lib', __dir__)
 require 'onlyoffice_github_helper/version'
 Gem::Specification.new do |s|
   s.name = 'onlyoffice_github_helper'
   s.version = OnlyofficeGithubHelper::Version::STRING
   s.platform = Gem::Platform::RUBY
-  s.required_ruby_version = '>= 2.0'
+  s.required_ruby_version = '>= 2.3'
   s.authors = ['ONLYOFFICE', 'Pavel Lobashov']
   s.summary = 'Github Helper Gem'
   s.description = 'Github Helper Gem for ONLYOFFICE QA'
