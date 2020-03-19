@@ -12,5 +12,5 @@ RSpec.shared_context 'github_client', shared_context: :metadata do
 end
 
 RSpec.configure do |rspec|
-  rspec.include_context 'github_client', include_shared: true
+  rspec.include_context 'github_client'
 end

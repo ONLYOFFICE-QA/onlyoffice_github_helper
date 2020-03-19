@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe OnlyofficeGithubHelper::Branches, include_shared: true do
+describe OnlyofficeGithubHelper::Branches do
   it 'Check that branches is a array' do
     expect(github.branches('ONLYOFFICE/sdkjs')).is_a?(Array)
   end

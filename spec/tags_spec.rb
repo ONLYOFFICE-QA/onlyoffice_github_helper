@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe OnlyofficeGithubHelper::Tags, include_shared: true do
+describe OnlyofficeGithubHelper::Tags do
   it 'Check that tags is a array' do
     expect(github.tags('ONLYOFFICE/ooxml_parser')).is_a?(Array)
   end
