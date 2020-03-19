@@ -2,6 +2,12 @@
 
 ## Unreleased (master)
 
+## 0.1.1 (2020-03-19)
+
+### Fixes
+
+* Fix posting gem to Github Packages
+
 ## 0.1.0 (2020-03-19)
 
 ### New Features
