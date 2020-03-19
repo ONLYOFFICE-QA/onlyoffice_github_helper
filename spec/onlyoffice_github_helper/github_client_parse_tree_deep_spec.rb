@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'parse_tree' do
+describe OnlyofficeGithubHelper::GithubClient, '#parse_tree' do
   it 'parse deep level tree' do
     parsed = github.parse_tree(['a/b/file1'])
     expect(parsed[:children][0][:name]).to eq('a')
