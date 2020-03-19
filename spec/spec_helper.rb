@@ -7,10 +7,10 @@ require 'codecov'
 SimpleCov.formatter = SimpleCov::Formatter::Codecov
 require 'onlyoffice_github_helper'
 
-RSpec.shared_context 'github_client', shared_context: :metadata do
+RSpec.shared_context 'with github_client', shared_context: :metadata do
   let(:github) { OnlyofficeGithubHelper::GithubClient.new }
 end
 
 RSpec.configure do |rspec|
-  rspec.include_context 'github_client'
+  rspec.include_context 'with github_client'
 end
