@@ -2,6 +2,8 @@
 
 ## Unreleased (master)
 
+## 0.1.0 (2020-03-19)
+
 ### New Features
 
 * Store folders before files in `file_tree`
