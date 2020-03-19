@@ -9,6 +9,7 @@
 * Require `codecov` only in CI environments
 * Cleanup `gemspec` file
 * Make `rake` development dependency
+* Add rake task to release gem on github
 
 ### Fixes
 * Correctly handle more than 30 branches\tags
