@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'lib/onlyoffice_github_helper'
+require_relative 'lib/onlyoffice_github_helper/name'
+require_relative 'lib/onlyoffice_github_helper/version'
 
 Gem::Specification.new do |s|
   s.name = OnlyofficeGithubHelper::Name::STRING
