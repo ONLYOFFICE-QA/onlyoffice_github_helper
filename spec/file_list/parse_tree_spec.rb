@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'parse_tree', include_shared: true do
+describe 'parse_tree' do
   it 'parse basic same level list' do
     parsed = github.parse_tree(%w[file1 file2])
     expect(parsed[:children].length).to eq(2)
