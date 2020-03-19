@@ -3,11 +3,20 @@
 require 'spec_helper'
 
 describe OnlyofficeGithubHelper::GithubClient, '#parse_tree' do
-  it 'parse basic same level list' do
-    parsed = github.parse_tree(%w[file1 file2])
-    expect(parsed[:children].length).to eq(2)
-    expect(parsed[:children][0][:name]).to eq('file1')
-    expect(parsed[:children][1][:name]).to eq('file2')
+  describe 'parse basic same level list' do
+    let(:parsed) { github.parse_tree(%w[file1 file2]) }
+
+    it 'parsed child length is correct' do
+      expect(parsed[:children].length).to eq(2)
+    end
+
+    it 'first child name is correct' do
+      expect(parsed[:children][0][:name]).to eq('file1')
+    end
+
+    it 'second child name is correct' do
+      expect(parsed[:children][1][:name]).to eq('file2')
+    end
   end
 
   it 'parse tree name extension in subdir' do
@@ -15,19 +24,43 @@ describe OnlyofficeGithubHelper::GithubClient, '#parse_tree' do
     expect(parsed[:children][0][:children][0][:name]).to eq('file2.rb')
   end
 
-  it 'parse basic diff level list' do
-    parsed = github.parse_tree(['file1', 'b/file2'])
-    expect(parsed[:children].length).to eq(2)
-    expect(parsed[:children][0][:name]).to eq('b')
-    expect(parsed[:children][0][:children][0][:name]).to eq('file2')
-    expect(parsed[:children][1][:name]).to eq('file1')
+  describe 'parse basic diff level list' do
+    let(:parsed) { github.parse_tree(['file1', 'b/file2']) }
+
+    it 'parsed child length is correct' do
+      expect(parsed[:children].length).to eq(2)
+    end
+
+    it 'first child name is correct' do
+      expect(parsed[:children][0][:name]).to eq('b')
+    end
+
+    it 'first child and its child name is correct' do
+      expect(parsed[:children][0][:children][0][:name]).to eq('file2')
+    end
+
+    it 'second child name is correct' do
+      expect(parsed[:children][1][:name]).to eq('file1')
+    end
   end
 
-  it 'parse several file withing single node' do
-    parsed = github.parse_tree(['a/file1', 'a/file2'])
-    expect(parsed[:children].length).to eq(1)
-    expect(parsed[:children][0][:name]).to eq('a')
-    expect(parsed[:children][0][:children][0][:name]).to eq('file1')
-    expect(parsed[:children][0][:children][1][:name]).to eq('file2')
+  describe 'parse several file withing single node' do
+    let(:parsed) { github.parse_tree(['a/file1', 'a/file2']) }
+
+    it 'parsed child length is correct' do
+      expect(parsed[:children].length).to eq(1)
+    end
+
+    it 'first child name is correct' do
+      expect(parsed[:children][0][:name]).to eq('a')
+    end
+
+    it 'first child and its child name is correct' do
+      expect(parsed[:children][0][:children][0][:name]).to eq('file1')
+    end
+
+    it 'first child and its second child name is correct' do
+      expect(parsed[:children][0][:children][1][:name]).to eq('file2')
+    end
   end
 end
