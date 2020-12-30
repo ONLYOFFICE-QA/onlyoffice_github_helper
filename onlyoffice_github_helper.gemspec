@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name = OnlyofficeGithubHelper::Name::STRING
   s.version = OnlyofficeGithubHelper::Version::STRING
   s.platform = Gem::Platform::RUBY
-  s.required_ruby_version = '>= 2.3'
+  s.required_ruby_version = '>= 2.5'
   s.authors = ['ONLYOFFICE', 'Pavel Lobashov']
   s.email = %w[shockwavenn@gmail.com]
   s.summary = 'Github Helper Gem'
