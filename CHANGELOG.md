@@ -2,6 +2,11 @@
 
 ## Unreleased (master)
 
+### New Features
+
+* Add support of `rubocop-performance` and `rubocop-rake`
+* Freeze all dependencies versions in `Gemfile.lock`
+
 ### Changes
 
 * Use `GitHub Actions` instead of `TravisCI`
