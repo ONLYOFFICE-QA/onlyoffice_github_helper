@@ -6,6 +6,7 @@
 
 * Add support of `rubocop-performance` and `rubocop-rake`
 * Freeze all dependencies versions in `Gemfile.lock`
+* Add `markdownlint` check in CI
 
 ### Changes
 
