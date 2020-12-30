@@ -2,6 +2,12 @@
 
 ## Unreleased (master)
 
+### Changes
+
+* Use `GitHub Actions` instead of `TravisCI`
+* Require ruby 2.5, since older one are EOL'ed
+* Drop support of older rubies in CI
+
 ## 0.1.1 (2020-03-19)
 
 ### Fixes
