@@ -8,6 +8,7 @@
 * Freeze all dependencies versions in `Gemfile.lock`
 * Add `markdownlint` check in CI
 * Add `rubocop` check in CI
+* Add `dependabot` config
 
 ### Changes
 
