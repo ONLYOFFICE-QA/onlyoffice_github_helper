@@ -9,8 +9,6 @@ jobs:
         ruby: 2.7
         allow-failures: [false]
         include:
-          - ruby: 3.0
-            allow-failures: true
           - ruby: head
             allow-failures: true
     steps:
