@@ -6,10 +6,10 @@ jobs:
     continue-on-error: ${{ matrix.allow-failures }}
     strategy:
       matrix:
-        ruby: [2.7, 3.0]
+        ruby: 2.7
         allow-failures: [false]
         include:
-          - ruby: head
+          - ruby: [3.0, head]
             allow-failures: true
     steps:
     - uses: actions/checkout@v2
