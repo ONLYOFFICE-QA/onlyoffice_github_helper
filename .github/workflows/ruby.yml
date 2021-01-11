@@ -9,7 +9,9 @@ jobs:
         ruby: 2.7
         allow-failures: [false]
         include:
-          - ruby: [3.0, head]
+          - ruby: 3.0
+            allow-failures: true
+          - ruby: head
             allow-failures: true
     steps:
     - uses: actions/checkout@v2
