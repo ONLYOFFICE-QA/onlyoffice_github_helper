@@ -18,6 +18,7 @@
 * Drop support of older rubies in CI
 * Add missing documentation
 * Use `rake` `sh` command for releasing gem
+* Move repo to `ONLYOFFICE-QA` org
 
 ## 0.1.1 (2020-03-19)
 
