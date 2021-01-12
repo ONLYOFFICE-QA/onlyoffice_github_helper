@@ -14,6 +14,6 @@ task :release_github_rubygems do
   gem_name = "pkg/#{OnlyofficeGithubHelper::Name::STRING}-"\
               "#{OnlyofficeGithubHelper::Version::STRING}.gem"
   sh('gem push --key github '\
-   '--host https://rubygems.pkg.github.com/onlyoffice-testing-robot '\
+   '--host https://rubygems.pkg.github.com/ONLYOFFICE-QA '\
    "#{gem_name}")
 end
