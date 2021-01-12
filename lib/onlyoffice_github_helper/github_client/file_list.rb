@@ -3,17 +3,29 @@
 module OnlyofficeGithubHelper
   # Module for working with file list
   module FileList
+    # Get file list in repo
+    # @param [String] repo to check
+    # @param [String] refs to check
+    # @return [Array<String>] list of files
     def file_list(repo, refs: 'master')
       Octokit.tree(repo, refs, recursive: true).tree
              .reject { |elem| elem.type == 'tree' }
              .map(&:path)
     end
 
+    # Get file tree in repo
+    # @param [String] repo to check
+    # @param [String] refs to check
+    # @return [Hash] file tree
     def file_tree(repo, refs: 'master')
       list = file_list(repo, refs: refs)
       parse_tree(list)
     end
 
+    # Parse file tree
+    # @param [Array<String>] list of file with full path
+    # @param [String] path to root
+    # @return [Hash] result of parse
     def parse_tree(list, path: '')
       root_tree = { name: path }
       root_tree[:children] = []
