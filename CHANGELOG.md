@@ -9,12 +9,14 @@
 * Add `markdownlint` check in CI
 * Add `rubocop` check in CI
 * Add `dependabot` config
+* Add CI check that 100% code is documented
 
 ### Changes
 
 * Use `GitHub Actions` instead of `TravisCI`
 * Require ruby 2.5, since older one are EOL'ed
 * Drop support of older rubies in CI
+* Add missing documentation
 
 ## 0.1.1 (2020-03-19)
 
