@@ -10,6 +10,7 @@
 * Add `rubocop` check in CI
 * Add `dependabot` config
 * Add CI check that 100% code is documented
+* CI check use config file, instead of direct env access
 
 ### Changes
 
