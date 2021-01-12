@@ -10,6 +10,8 @@
 * Add `rubocop` check in CI
 * Add `dependabot` config
 * Add CI check that 100% code is documented
+* Add `ruby-3.0` to CI
+* Enable `branch` coverage in `simplecov`
 
 ### Changes
 
@@ -19,6 +21,9 @@
 * Add missing documentation
 * Use `rake` `sh` command for releasing gem
 * Move repo to `ONLYOFFICE-QA` org
+* CI check use config file, instead of direct env access
+* Test coverage is 100%
+* Remove support of `codecov`
 
 ## 0.1.1 (2020-03-19)
 

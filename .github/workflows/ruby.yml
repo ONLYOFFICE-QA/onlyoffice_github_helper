@@ -6,7 +6,7 @@ jobs:
     continue-on-error: ${{ matrix.allow-failures }}
     strategy:
       matrix:
-        ruby: [2.7]
+        ruby: [2.7, 3.0]
         allow-failures: [false]
         include:
           - ruby: head
@@ -22,10 +22,14 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-    - name: Build and test with Rake
+    - name: Create config file
       env:
         GITHUB_USER_NAME: ${{ secrets.USER_NAME }}
         GITHUB_USER_PASSWORD: ${{ secrets.USER_PASS }}
+      run: |
+        echo "github_user: $GITHUB_USER_NAME" > config.yml
+        echo "github_user_password: $GITHUB_USER_PASSWORD" >> config.yml
+    - name: Build and test with Rake
       run: |
         gem install bundler
         bundle install --jobs 4 --retry 3
@@ -34,3 +38,7 @@ jobs:
       run: rubocop
     - name: Check that code 100% documented
       run: yardoc . | grep -q '100.00% documented'
+    - name: Check `simplecov` line coverage
+      run: cat coverage/.last_run.json | jq '.result.line' | grep -q '100'
+    - name: Check `simplecov` branch coverage
+      run: cat coverage/.last_run.json | jq '.result.branch' | grep -q '100'
