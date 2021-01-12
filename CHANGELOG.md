@@ -17,6 +17,7 @@
 * Require ruby 2.5, since older one are EOL'ed
 * Drop support of older rubies in CI
 * Add missing documentation
+* Use `rake` `sh` command for releasing gem
 
 ## 0.1.1 (2020-03-19)
 
