@@ -12,8 +12,8 @@ desc 'Release gem '
 task :release_github_rubygems do
   Rake::Task['release'].invoke
   gem_name = "pkg/#{OnlyofficeGithubHelper::Name::STRING}-"\
-              "#{OnlyofficeGithubHelper::Version::STRING}.gem"
+             "#{OnlyofficeGithubHelper::Version::STRING}.gem"
   sh('gem push --key github '\
-   '--host https://rubygems.pkg.github.com/ONLYOFFICE-QA '\
-   "#{gem_name}")
+     '--host https://rubygems.pkg.github.com/ONLYOFFICE-QA '\
+     "#{gem_name}")
 end
