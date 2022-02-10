@@ -13,6 +13,7 @@
 ### Changes
 
 * Require `mfa` for releasing gem
+* Check `dependabot` at 8:00 Moscow time daily
 
 ## 0.2.0 (2021-01-12)
 
