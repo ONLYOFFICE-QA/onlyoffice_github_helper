@@ -31,8 +31,8 @@ module OnlyofficeGithubHelper
     def init_github_access(config)
       return if @user_name && @user_password
 
-      @user_name = ENV['GITHUB_USER_NAME']
-      @user_password = ENV['GITHUB_USER_PASSWORD']
+      @user_name = ENV.fetch('GITHUB_USER_NAME', 'unknown_user')
+      @user_password = ENV.fetch('GITHUB_USER_PASSWORD', 'unknown_password')
       return unless File.exist?(config)
 
       @config = YAML.load_file(config)
