@@ -10,13 +10,13 @@ describe OnlyofficeGithubHelper::GithubClient, '#parse_tree_deep' do
   end
 
   it 'correct first child name' do
-    expect(parsed[:children][0]\
+    expect(parsed[:children][0] \
                  [:children][0][:name]).to eq('b')
   end
 
   it 'correct file name' do
-    expect(parsed[:children][0]\
-                 [:children][0]\
+    expect(parsed[:children][0] \
+                 [:children][0] \
                  [:children][0][:name]).to eq('file1')
   end
 end
