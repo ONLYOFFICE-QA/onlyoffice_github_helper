@@ -16,7 +16,7 @@ GEM
     faraday (2.3.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.3)
+    faraday-net_http (2.1.0)
     iniparse (1.5.0)
     json (2.6.2)
     octokit (5.1.0)
