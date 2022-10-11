@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    onlyoffice_github_helper (1.0.0)
+    onlyoffice_github_helper (1.1.0)
       faraday-retry (~> 2)
       octokit (>= 4, < 6)
 
