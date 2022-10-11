@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     onlyoffice_github_helper (1.0.0)
+      faraday-retry (~> 2)
       octokit (>= 4, < 6)
 
 GEM
@@ -17,6 +18,8 @@ GEM
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.1)
+    faraday-retry (2.0.0)
+      faraday (~> 2.0)
     iniparse (1.5.0)
     json (2.6.2)
     octokit (5.6.1)
