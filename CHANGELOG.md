@@ -2,6 +2,12 @@
 
 ## Unreleased (master)
 
+## 1.1.0 (2022-10-11)
+
+### New Features
+
+* Add `faraday-retry` gem as dependency to allow automatic retries
+
 ## 1.0.0 (2022-07-14)
 
 ### New Features
