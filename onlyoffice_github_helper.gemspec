@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.files = Dir['lib/**/*']
   s.license = 'AGPL-3.0'
   s.add_runtime_dependency('faraday-retry', '~> 2')
-  s.add_runtime_dependency('octokit', '>= 4', '< 6')
+  s.add_runtime_dependency('octokit', '>= 4', '< 7')
   s.add_development_dependency('overcommit', '~> 0')
   s.add_development_dependency('rake', '~> 13')
   s.add_development_dependency('rspec', '~> 3')
