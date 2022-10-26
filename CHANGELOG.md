@@ -2,6 +2,12 @@
 
 ## Unreleased (master)
 
+## 1.2.0 (2022-10-26)
+
+### Changes
+
+* Allow usage of `octokit` gem 6.0.0 and newer
+
 ## 1.1.0 (2022-10-11)
 
 ### New Features
