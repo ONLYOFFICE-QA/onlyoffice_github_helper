@@ -9,3 +9,7 @@ inherit_from:
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.0
+
+# Until https://github.com/rubocop/rubocop/issues/12430 is fixed
+Style/RedundantLineContinuation:
+  Enabled: false
