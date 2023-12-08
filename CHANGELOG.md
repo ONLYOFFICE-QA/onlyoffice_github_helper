@@ -2,6 +2,10 @@
 
 ## Unreleased (master)
 
+### Changes
+
+* Extract `rubocop` CI task to separate job
+
 ## 1.3.0 (2023-11-24)
 
 ### New Features
