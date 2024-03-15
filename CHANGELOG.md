@@ -5,6 +5,7 @@
 ### New Features
 
 * Add `dependabot` check for `GitHub Actions`
+* Add `ruby-3.3` in CI
 
 ### Changes
 
