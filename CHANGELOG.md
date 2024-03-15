@@ -2,6 +2,10 @@
 
 ## Unreleased (master)
 
+### New Features
+
+* Add `dependabot` check for `GitHub Actions`
+
 ### Changes
 
 * Extract `rubocop` CI task to separate job
