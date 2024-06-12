@@ -7,6 +7,10 @@
 * Add `dependabot` check for `GitHub Actions`
 * Add `ruby-3.3` in CI
 
+### Fixes
+
+* Fix rspec issues found by upgrade to `rubocop-rspec-3.0.1`
+
 ### Changes
 
 * Extract `rubocop` CI task to separate job

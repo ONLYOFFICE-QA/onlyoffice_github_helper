@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe OnlyofficeGithubHelper::Branches do
   it 'Check that branches is a array' do
-    expect(github.branches('ONLYOFFICE/sdkjs')).is_a?(Array)
+    expect(github.branches('ONLYOFFICE/sdkjs')).to be_a(Array)
   end
 
   it 'Check that branches include master' do

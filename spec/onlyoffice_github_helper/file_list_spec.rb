@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe OnlyofficeGithubHelper::FileList do
   it 'Check that file list is returned' do
-    expect(github.file_list('ONLYOFFICE/ooxml_parser')).is_a?(Array)
+    expect(github.file_list('ONLYOFFICE/ooxml_parser')).to be_a(Array)
   end
 
   it 'Check that file list not contains folders by itself' do
