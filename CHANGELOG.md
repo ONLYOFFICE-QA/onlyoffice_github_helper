@@ -2,6 +2,8 @@
 
 ## Unreleased (master)
 
+## 1.4.0 (2024-06-28)
+
 ### New Features
 
 * Add `dependabot` check for `GitHub Actions`
@@ -14,6 +16,7 @@
 ### Changes
 
 * Extract `rubocop` CI task to separate job
+* Allow v9 of `octokit` as dependency
 
 ## 1.3.0 (2023-11-24)
 
