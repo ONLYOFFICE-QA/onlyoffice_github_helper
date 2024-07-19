@@ -5,6 +5,7 @@
 ### Changes
 
 * [CI] Workaround for issue with upgrading bundler
+* Fix `rubocop-1.65.0` cop `Gemspec/AddRuntimeDependency`
 
 ## 1.4.0 (2024-06-28)
 

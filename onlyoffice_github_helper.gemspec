@@ -23,6 +23,6 @@ Gem::Specification.new do |s|
   }
   s.files = Dir['lib/**/*']
   s.license = 'AGPL-3.0'
-  s.add_runtime_dependency('faraday-retry', '~> 2')
-  s.add_runtime_dependency('octokit', '>= 4', '< 10')
+  s.add_dependency('faraday-retry', '~> 2')
+  s.add_dependency('octokit', '>= 4', '< 10')
 end
