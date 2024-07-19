@@ -24,6 +24,11 @@ jobs:
         run: |
           echo "github_user: $GITHUB_USER_NAME" > config.yml
           echo "github_user_password: $GITHUB_USER_PASSWORD" >> config.yml
+      # Until https://github.com/actions/runner-images/issues/10215
+      # is resolved
+      - name: Fix issue with ruby permissions
+        run: |
+          chmod -R o-w /opt/hostedtoolcache/Ruby
       - name: Build and test with Rake
         run: |
           gem install bundler
