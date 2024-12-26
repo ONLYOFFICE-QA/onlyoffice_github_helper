@@ -2,10 +2,15 @@
 
 ## Unreleased (master)
 
+### New Features
+
+* Add `ruby-3.4` to CI
+
 ### Changes
 
 * [CI] Workaround for issue with upgrading bundler
 * Fix `rubocop-1.65.0` cop `Gemspec/AddRuntimeDependency`
+* Remove `ruby-3.0` from CI, since it's EOLed
 
 ## 1.4.0 (2024-06-28)
 
